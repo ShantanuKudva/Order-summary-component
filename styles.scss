@@ -1,0 +1,66 @@
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Red Hat Display";
+    font-size: 16px; 
+    background-color: $pale-blue;
+}
+.card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 550px;
+    width: 375px;
+    text-align: center;
+    border-radius: 15px;
+    display: grid;
+    // justify-content: center;
+    // align-items: center;
+    &-img{
+        object-fit: scale-down;
+        svg{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            width: 375px;
+            height: 200px;
+            
+        }
+        
+        &-header{
+            h3{
+                color: $dark-blue;
+                font-weight: 700;
+            }
+            
+        }
+    }
+
+
+}
+
+
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px; text-align: center; 
+      a { 
+          color: hsl(228, 45%, 44%);
+         }
+    }

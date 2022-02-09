@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  background-color: #e0e8ff;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  height: 550px;
+  width: 375px;
+  text-align: center;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.card-img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.card-img svg {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 375px;
+  height: 200px;
+}
+
+.card-img-header h3 {
+  color: #1f2f56;
+  font-weight: 700;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */
