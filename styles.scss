@@ -3,52 +3,147 @@ $bright-blue: hsl(245, 75%, 52%);
 $very-pale-blue: hsl(225, 100%, 98%);
 $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
+$bright-blue-hover: hsl(245, 74%, 62%);
+$dark-blue-hover: hsl(223, 41%, 27%);
 
-
-*,
-*::before,
-*::after{
-    margin: 0;
-    padding: 0;
-}
+// *,
+// *::before,
+// *::after{
+//     margin: 0;
+//     padding: 0;
+// }
 
 body{
     font-family: "Red Hat Display";
     font-size: 16px; 
-    background-color: $pale-blue;
+    background-color: $very-pale-blue;
 }
+
 .card{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    height: 550px;
+    height: 570px;
     width: 375px;
     text-align: center;
     border-radius: 15px;
-    display: grid;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 10px $pale-blue;
+    z-index: 2;
+    &:not(:first){
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+   
     &-img{
-        object-fit: scale-down;
         svg{
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             width: 375px;
-            height: 200px;
+            height: 175px;
             
         }
-        
+            
+        }
         &-header{
-            h3{
+            h2{
+                padding-top: 30px;
+                margin: 0;
+                color: $dark-blue;
+                font-weight: 900;
+            }
+            &-text{
+                p{  
+                    padding-top: 0;
+                    padding: 0 25px;
+                    font-size: 15px;
+                    color:$desaturated-blue;
+                }
+                
+            }
+           
+         }
+
+         &-payments{
+             background-color: $very-pale-blue;
+             border-radius: 15px;
+             margin: 0 30px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             
+             svg{
+                 transform: translateX(-30%);
+                 margin-right: 50px;
+             }
+             
+             &-div{
+                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+                transform: translateX(-50%);
+                font-size: 13px;
+                
+               p{
+                margin-top: 0;
+                margin-bottom: 0;
+                color: $desaturated-blue;
+               
+                &:first-child{
+                    font-size: 15px;
+                    font-weight: 900;
+                    padding-bottom: 5px;
+                    color: $dark-blue;
+                    
+                }
+              }
+            }
+         }
+         &-change{
+            transform: translateX(40%);
+             a{
+                font-size: 13px;
+                color: $bright-blue;
+                font-weight: 700;
+                transition: all 0.5s;
+                
+                &:hover{
+                    color:$bright-blue-hover;
+                }
+             }
+         }
+
+         &-button{
+             margin: 35px 20px 20px 20px;
+             background-color: $bright-blue;
+             padding: 10px 0;
+             color: white;
+             width: 300px;
+             transform: translateX(5%);
+             border-radius: 7.5px;
+             box-shadow: 0 5px 5px $pale-blue;
+             transition: all 0.5s;
+             &:hover{
+                 background-color: $bright-blue-hover;
+                 box-shadow: 0 10px 5px $pale-blue;
+                 transform: translate(5%, -3px);
+             }
+             &-2{
+                 font-size: 13px;
+                margin-top: 10px;
                 color: $dark-blue;
                 font-weight: 700;
-            }
-            
-        }
-    }
+                transition: all 0.5s;
+                &:hover{
+                    color: red;
+                }
+             }
 
+         }
 
 }
 

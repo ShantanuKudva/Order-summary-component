@@ -1,14 +1,7 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Red Hat Display";
   font-size: 16px;
-  background-color: #e0e8ff;
+  background-color: #f5f7ff;
 }
 
 .card {
@@ -18,29 +11,152 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: white;
-  height: 550px;
+  height: 570px;
   width: 375px;
   text-align: center;
   border-radius: 15px;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 25px 10px #e0e8ff;
+          box-shadow: 0 25px 10px #e0e8ff;
+  z-index: 2;
 }
 
-.card-img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+.card:not(:first) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
 }
 
 .card-img svg {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   width: 375px;
-  height: 200px;
+  height: 175px;
 }
 
-.card-img-header h3 {
+.card-header h2 {
+  padding-top: 30px;
+  margin: 0;
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.card-header-text p {
+  padding-top: 0;
+  padding: 0 25px;
+  font-size: 15px;
+  color: #7280a7;
+}
+
+.card-payments {
+  background-color: #f5f7ff;
+  border-radius: 15px;
+  margin: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-payments svg {
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  margin-right: 50px;
+}
+
+.card-payments-div {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 13px;
+}
+
+.card-payments-div p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #7280a7;
+}
+
+.card-payments-div p:first-child {
+  font-size: 15px;
+  font-weight: 900;
+  padding-bottom: 5px;
+  color: #1f2f56;
+}
+
+.card-change {
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
+}
+
+.card-change a {
+  font-size: 13px;
+  color: #3829e0;
+  font-weight: 700;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-change a:hover {
+  color: #6256e6;
+}
+
+.card-button {
+  margin: 35px 20px 20px 20px;
+  background-color: #3829e0;
+  padding: 10px 0;
+  color: white;
+  width: 300px;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+  border-radius: 7.5px;
+  -webkit-box-shadow: 0 5px 5px #e0e8ff;
+          box-shadow: 0 5px 5px #e0e8ff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-button:hover {
+  background-color: #6256e6;
+  -webkit-box-shadow: 0 10px 5px #e0e8ff;
+          box-shadow: 0 10px 5px #e0e8ff;
+  -webkit-transform: translate(5%, -3px);
+          transform: translate(5%, -3px);
+}
+
+.card-button-2 {
+  font-size: 13px;
+  margin-top: 10px;
   color: #1f2f56;
   font-weight: 700;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-button-2:hover {
+  color: red;
 }
 
 .attribution {
