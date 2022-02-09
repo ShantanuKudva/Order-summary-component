@@ -4,6 +4,28 @@ body {
   background-color: #f5f7ff;
 }
 
+.decoration {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 30vh;
+  background-color: #e0e8ff;
+}
+
+.wavy-decoration {
+  -webkit-transform: translateY(30vh);
+          transform: translateY(30vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 40vh;
+}
+
 .card {
   position: absolute;
   left: 50%;
@@ -126,7 +148,7 @@ body {
 .card-button {
   margin: 35px 20px 20px 20px;
   background-color: #3829e0;
-  padding: 10px 0;
+  padding: 15px 0;
   color: white;
   width: 300px;
   -webkit-transform: translateX(5%);
@@ -147,7 +169,7 @@ body {
 }
 
 .card-button-2 {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 10px;
   color: #1f2f56;
   font-weight: 700;
